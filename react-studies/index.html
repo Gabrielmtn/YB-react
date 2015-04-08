@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>React studies</title>
+	<link rel="main.css" href="">
+</head>
+<body>
+
+<!-- Container Node -->
+
+
+	<script src="http://fb.me/react-0.13.1.js"></script>
+	<script src="http://fb.me/JSXTransformer-0.13.1.js"></script>
+
+	<script type="text/jsx">
+   /** @jsx React.DOM */
+
+   var MessageBox = React.createClass({
+   	render: function() {
+   		return (
+   			<h1>Hello, World</h1>
+   		);
+   	}
+   });
+
+   React.render(
+    	<MessageBox />,
+   	document.body,
+    function(){
+		console.log('after render');
+    }
+ )
+
+	</script>
+</body>
+</html>
