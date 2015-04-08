@@ -7,9 +7,12 @@ import { USER_DATA } from './smallUsers';
 import { Table } from './fixedTable.jsx!';
 import sortBy from 'lodash/collection/sortBy';
 
+//inital sort of of the array by the name key
 let sorted = sortBy(USER_DATA, 'name');
 
+//It's actually incredible how legible this component is as compared to when I first approached it
 let App = React.createClass({
+
   getInitialState () {
     return {
       sortColumn: 'name',
