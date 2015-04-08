@@ -41,7 +41,7 @@ let Cell = React.createClass({
 })
 
 // Just hardcode the columns for simplicity
-let COLUMN_PROPORTIES = ['name', 'email', 'is_enabled', 'company', 'office', 'uid'];
+let COLUMN_PROPERTIES = ['name', 'email', 'is_enabled', 'company', 'office', 'uid'];
 export let Table = React.createClass({
   onColToggle (newColumn) {
     this.props.onColToggle(newColumn);
@@ -51,7 +51,7 @@ export let Table = React.createClass({
     return (
       <div className="flip-the-table">
         <div className="row header">
-          {map(COLUMN_PROPORTIES, (key) => (
+          {map(COLUMN_PROPERTIES, (key) => (
             <ColumnHeader
               onColToggle={ this.onColToggle }
               active={ sortColumn === key }
@@ -63,7 +63,7 @@ export let Table = React.createClass({
         { map(rowData, (d) => {
           return (
             <div className="row">
-              {map(COLUMN_PROPORTIES, (key) => (
+              {map(COLUMN_PROPERTIES, (key) => (
                 <Cell
                   row={ d }
                   property={ key } />

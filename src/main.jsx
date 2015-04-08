@@ -12,14 +12,26 @@ let sorted = sortBy(USER_DATA, 'name');
 
 //It's actually incredible how legible this component is as compared to when I first approached it
 let App = React.createClass({
-
+  //Dash's docs tool has been super handy for learning React
   getInitialState () {
     return {
       sortColumn: 'name',
       sortDirection: 'az',
     };
   },
+
+// #  ████████╗ ██████╗ ██████╗  ██████╗
+// #  ╚══██╔══╝██╔═══██╗██╔══██╗██╔═══██╗
+// #     ██║   ██║   ██║██║  ██║██║   ██║
+// #     ██║   ██║   ██║██║  ██║██║   ██║
+// #     ██║   ╚██████╔╝██████╔╝╚██████╔╝
+// #     ╚═╝    ╚═════╝ ╚═════╝  ╚═════╝
+// #
+
+  //this method lead me to onColToggle, which I traced back to fixedTable. Will step through for clarity later
   handleColToggle (newColumn) {
+    // I was originally perplexed by this line statement, but I've come to find ternary statements are awesome
+    // I'm still tracing around the logic here, which while not vital for adding components, will be vital for building my own
     let newDirection = (this.state.sortDirection === 'az' && this.state.sortColumn === newColumn) ? 'za' : 'az'
     this.setState({
       sortColumn: newColumn,
