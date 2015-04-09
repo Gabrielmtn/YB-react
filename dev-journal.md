@@ -17,7 +17,7 @@ I'm thinking that the "based on fixed-data-table" comment may be less about usin
 
 If I'm going to find components to extend the table, I should be searching for component prototypes / inspiration elsewhere.
 
-##Entry 3 - Step through Main.jsx
+##Entry 2 - Step through Main.jsx
 
 It's notable how initially opaque this file was, versus how it feels now with my studies of react. I can now conceptualize much of the functionality, and track the components' heirarchy through the code.
 
@@ -38,7 +38,7 @@ I also studied let vs var, but curious why let works better than var here:
     let App = React.createClass({
 
 
-##Entry 4 - Implement Data into existing Concepts
+##Entry 3 - Implement Data into existing Components research
 
 Research: http://summitroute.github.io/react-structured-filter/demo.html (too hot)
 
