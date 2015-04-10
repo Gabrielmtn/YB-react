@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import { USER_DATA } from './smallUsers';
-import { USER_DATA } from './smallUsers';
+import { USER_DATA } from './mediumUsers';
 // import { USER_DATA } from './largeUsers';
 
 import { Table } from './fixedTable.jsx!';

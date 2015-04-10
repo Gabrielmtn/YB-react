@@ -45,3 +45,13 @@ Research: http://summitroute.github.io/react-structured-filter/demo.html (too ho
 Research: http://glittershark.github.io/reactable/ (too cold)
 
 Research: http://griddlegriddle.github.io/Griddle/ (just right)
+
+##Entry 4 - Day two of serious React studying.
+
+I'm starting to be less interested in the tutorials and more interested in the docs, this may be due to that fact that all tuts seem to cover the same basic stuff, and I'm not learning as much.
+
+I found an excellent .docset file for react, and have enjoyed stepping through it as a see unfamiliar things in various projects.
+
+I think the little projects I do in the react-studies folder give me the most literacy with react, and ability to create, so I'll likely focus on projects like that until I feel familiar enough to create the searchbar from scratch. 
+
+I made some progress on the UX of the table, adding hover states and better visual style. 
