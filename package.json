@@ -20,9 +20,11 @@
     "directories": {},
     "configFile": "src/config.js",
     "dependencies": {
+      "griddle-react": "npm:griddle-react@0.2.12",
       "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
       "lodash": "npm:lodash@3.6",
-      "react": "npm:react@0.13"
+      "react": "npm:react@0.13",
+      "underscore": "npm:underscore@1.8.3"
     },
     "devDependencies": {
       "babel": "npm:babel@^4.7.16",

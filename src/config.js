@@ -17,9 +17,11 @@ System.config({
   "map": {
     "babel": "npm:babel@4.7.16",
     "babel-runtime": "npm:babel-runtime@4.7.16",
+    "griddle-react": "npm:griddle-react@0.2.12",
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
     "lodash": "npm:lodash@3.6.0",
     "react": "npm:react@0.13.1",
+    "underscore": "npm:underscore@1.8.3",
     "github:floatdrop/plugin-jsx@1.1.0": {
       "react-tools": "npm:react-tools@0.13.1"
     },
@@ -248,6 +250,10 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "util": "github:jspm/nodelibs-util@0.1.0",
       "vm": "github:jspm/nodelibs-vm@0.1.0"
+    },
+    "npm:griddle-react@0.2.12": {
+      "react": "npm:react@0.13.1",
+      "underscore": "npm:underscore@1.8.3"
     },
     "npm:hash.js@1.0.2": {
       "inherits": "npm:inherits@2.0.1"

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Griddle from 'griddle-react';
+
 // import { USER_DATA } from './smallUsers';
 import { USER_DATA } from './mediumUsers';
 // import { USER_DATA } from './largeUsers';
@@ -47,6 +49,12 @@ let App = React.createClass({
   render () {
     return (
       <div>
+        <h1>Here goes nothing</h1>
+        <Griddle results={sorted} tableClassName="table" showFilter={true}
+ showSettings={true} columns={["name", "company", "email", "phone", "office", "is_enabled", "uid"]}
+  sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
+  sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}/>
+
         <h1>Welcome to the Jungle</h1>
         <p>There are { sorted.length } users in the system.</p>
         <Table
@@ -58,5 +66,7 @@ let App = React.createClass({
     );
   }
 });
+
+
 
 React.render(<App/>, document.body);
