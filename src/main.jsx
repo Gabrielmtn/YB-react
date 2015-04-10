@@ -50,6 +50,7 @@ let App = React.createClass({
     return (
       <div>
         <h1>Here goes nothing</h1>
+        <h2>Trying to fix active column</h2>
         <Griddle results={sorted} tableClassName="table" showFilter={true} showSettings={true} columns={["name", "company", "email", "phone", "office", "uid"]}
         sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
         sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}/>
