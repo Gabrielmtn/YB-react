@@ -26,6 +26,8 @@ let ColumnHeader = React.createClass({
   }
 })
 
+
+
 let Cell = React.createClass({
   render () {
     let { row, property } = this.props;
@@ -40,10 +42,16 @@ let Cell = React.createClass({
   }
 })
 
+
+
+
 // Just hardcode the columns for simplicity
 let COLUMN_PROPERTIES = ['name', 'email', 'is_enabled', 'company', 'office', 'uid'];
 
-export let Table = React.createClass({
+
+
+
+export let TableUpgrade = React.createClass({
   onColToggle (newColumn) {
     this.props.onColToggle(newColumn);
   },
@@ -58,6 +66,14 @@ export let Table = React.createClass({
               active={ sortColumn === key }
               direction={ sortDirection }
               property={ key } />
+            )
+          )}
+        </div>
+
+          <div className="row header">
+          {map(COLUMN_PROPERTIES, (key) => (
+              <input className={key + "-filter"} placeholder={ key === 'is_enabled' ? 'E' : key } />
+
             )
           )}
         </div>
