@@ -7,10 +7,21 @@ import { USER_DATA } from './mediumUsers';
 // import { USER_DATA } from './largeUsers';
 
 import { Table } from './fixedTable.jsx!';
+import { TableUpgrade } from './fixedTable-upgrade.jsx!';
 import sortBy from 'lodash/collection/sortBy';
 
 //inital sort of of the array by the name key
 let sorted = sortBy(USER_DATA, 'name');
+
+
+var SearchBox = React.createClass({
+  render: function() {
+    return (
+      <input type="text" placeholder="Filter" className="SearchBox"></input>
+    );
+  }
+});
+
 
 //It's actually incredible how legible this component is as compared to when I first approached it
 let App = React.createClass({
@@ -49,18 +60,30 @@ let App = React.createClass({
   render () {
     return (
       <div>
-        <h1>Here goes nothing</h1>
+
+           <h1>Updated Table</h1>
+           <SearchBox />
+        <p>There are { sorted.length } users in the system.</p>
+        <TableUpgrade
+          onColToggle={ this.handleColToggle }
+          sortColumn={ this.state.sortColumn }
+          sortDirection={ this.state.sortDirection }
+          rowData={ sorted }></TableUpgrade>
+
+<h1>Here goes nothing (drop in solution)</h1>
         <Griddle results={sorted} tableClassName="table" showFilter={true} showSettings={true} columns={["name", "company", "email", "phone", "office", "uid"]}
         sortAscendingComponent={<span className="fa fa-sort-alpha-asc"></span>}
         sortDescendingComponent={<span className="fa fa-sort-alpha-desc"></span>}/>
 
-        <h1>Welcome to the Jungle</h1>
+        <h1>Original Table</h1>
         <p>There are { sorted.length } users in the system.</p>
         <Table
           onColToggle={ this.handleColToggle }
           sortColumn={ this.state.sortColumn }
           sortDirection={ this.state.sortDirection }
           rowData={ sorted }></Table>
+
+
       </div>
     );
   }
