@@ -14,14 +14,6 @@ import sortBy from 'lodash/collection/sortBy';
 let sorted = sortBy(USER_DATA, 'name');
 
 
-var SearchBox = React.createClass({
-  render: function() {
-    return (
-      <input type="text" placeholder="Filter" className="SearchBox"></input>
-    );
-  }
-});
-
 
 //It's actually incredible how legible this component is as compared to when I first approached it
 let App = React.createClass({
@@ -62,7 +54,7 @@ let App = React.createClass({
       <div>
 
            <h1>Updated Table</h1>
-           <SearchBox />
+           <h4>This is going to remain as a proof of concept. I will demonstrate props and state understanding with other components.</h4>
         <p>There are { sorted.length } users in the system.</p>
         <TableUpgrade
           onColToggle={ this.handleColToggle }
