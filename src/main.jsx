@@ -54,7 +54,7 @@ let App = React.createClass({
       <div>
 
            <h1>Updated Table</h1>
-           <h4>This will have to remain as a proof of concept. To execute I will need to use a diferent structure.</h4>
+           <h4>This is going to remain as a proof of concept. I will demonstrate props and state understanding with other components.</h4>
         <p>There are { sorted.length } users in the system.</p>
         <TableUpgrade
           onColToggle={ this.handleColToggle }
