@@ -43,6 +43,23 @@ let Cell = React.createClass({
 })
 
 
+let FilterInput = React.createClass({
+  handleChange: function() {
+        this.props.onUserInput(
+            this.refs.filterInput.getDOMNode().value
+        );
+    },
+
+  render: function() {
+    return (
+      <input 
+      ref="filterInput"
+      onChange={this.handleChange}
+      className={this.props.className} 
+      placeholder={this.props.placeholder} />
+  );
+  }
+})
 
 
 // Just hardcode the columns for simplicity
@@ -67,13 +84,14 @@ export let TableUpgrade = React.createClass({
               direction={ sortDirection }
               property={ key } />
             )
-          )}
+          )}  
         </div>
 
-          <div className="row header">
+        <div className="row header">
           {map(COLUMN_PROPERTIES, (key) => (
-              <input className={key + "-filter"} placeholder={ key === 'is_enabled' ? 'E' : key } />
-
+            <FilterInput
+              className={key + "-filter"}
+              placeholder={ key === 'is_enabled' ? 'E' : key } />
             )
           )}
         </div>
